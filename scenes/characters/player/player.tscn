@@ -394,7 +394,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t61fv"]
-radius = 8.06226
+radius = 5.09902
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
@@ -403,11 +403,11 @@ script = ExtResource("1_6avc5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_omk8d")
-animation = &"watering_right"
+animation = &"idle_front"
 autoplay = "idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -8)
+position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_t61fv")
 
 [node name="StateMachine" type="Node2D" parent="." node_paths=PackedStringArray("initial_node_state")]
