@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bf2d0n7x6n7ll" path="res://scenes/components/damage_component.tscn" id="4_w057i"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yewih"]
+resource_local_to_scene = true
 shader = ExtResource("1_w057i")
 shader_parameter/shake_intensity = 0.0
 shader_parameter/shake_speed = 20.0
@@ -34,6 +35,7 @@ position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_a8qts")
 
 [node name="HurtComponent" parent="." unique_id=1253420014 instance=ExtResource("2_xyb6m")]
+tool = 1
 
 [node name="HitComponentCollisionShape" type="CollisionShape2D" parent="HurtComponent" unique_id=1579256253]
 position = Vector2(0, -1.5)

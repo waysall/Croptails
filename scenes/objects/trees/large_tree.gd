@@ -11,10 +11,15 @@ func _ready() -> void:
 	
 func on_hurt(hit_damage: int) -> void:
 	damage_component.apply_damage(hit_damage)
+	await get_tree().create_timer(0.33).timeout
+	material.set_shader_parameter("shake_intensity", 1)
+	await get_tree().create_timer(0.4).timeout
+	material.set_shader_parameter("shake_intensity", 0.0)
 
 func on_max_damage_reached() -> void:
 	call_deferred("add_log_scene")
 	print("Max damage reached")
+	await get_tree().create_timer(0.33).timeout
 	queue_free()
 
 func add_log_scene() -> void:
